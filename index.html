@@ -11,7 +11,7 @@
   <body>
     <main class="page">
       <header class="topbar">
-        <a class="brand" href="#" aria-label="Fridgekeeper home">
+        <a class="brand" href="index.html" aria-label="Fridgekeeper home">
           <span class="brand-mark" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
               <path d="M7 3.75h10a1.75 1.75 0 0 1 1.75 1.75v13A1.75 1.75 0 0 1 17 20.25H7a1.75 1.75 0 0 1-1.75-1.75v-13A1.75 1.75 0 0 1 7 3.75Z" stroke="currentColor" stroke-width="1.6"/>
@@ -20,7 +20,23 @@
           </span>
           fridgekeeper
         </a>
-        <span class="top-note">Waste less food, waste less money.</span>
+        <div class="navbar p-0">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#main-navigation" aria-controls="main-navigation" aria-label="Open navigation menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="main-navigation" aria-labelledby="main-navigation-title">
+            <div class="offcanvas-header">
+              <h2 class="offcanvas-title" id="main-navigation-title">Navigate</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close navigation"></button>
+            </div>
+            <div class="offcanvas-body">
+              <nav class="navbar-nav" aria-label="Main navigation">
+                <a class="nav-link active" href="index.html" aria-current="page">My fridge</a>
+                <a class="nav-link" href="recipes.html">Recipe finder</a>
+              </nav>
+            </div>
+          </div>
+        </div>
       </header>
 
       <section class="intro" aria-labelledby="page-title">

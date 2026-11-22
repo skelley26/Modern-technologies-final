@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f4ed">
+    <title>Recipes for your fridge — Fridgekeeper</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="recipes.css">
+  </head>
+  <body>
+    <main class="page recipe-page">
+      <header class="topbar">
+        <a class="brand" href="index.html" aria-label="Fridgekeeper home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M7 3.75h10a1.75 1.75 0 0 1 1.75 1.75v13A1.75 1.75 0 0 1 17 20.25H7a1.75 1.75 0 0 1-1.75-1.75v-13A1.75 1.75 0 0 1 7 3.75Z" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M5.5 11.5h13M9 7.25v1.5m0 5.75V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          fridgekeeper
+        </a>
+        <div class="navbar p-0">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#main-navigation" aria-controls="main-navigation" aria-label="Open navigation menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="main-navigation" aria-labelledby="main-navigation-title">
+            <div class="offcanvas-header">
+              <h2 class="offcanvas-title" id="main-navigation-title">Navigate</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close navigation"></button>
+            </div>
+            <div class="offcanvas-body">
+              <nav class="navbar-nav" aria-label="Main navigation">
+                <a class="nav-link" href="index.html">My fridge</a>
+                <a class="nav-link active" href="recipes.html" aria-current="page">Recipe finder</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Good food, right on time</p>
+        <h1>Make something with what’s next.</h1>
+        <p class="subtitle">Find recipe ideas using the ingredients in your fridge that are closest to expiring.</p>
+      </section>
+
+      <section class="panel recipe-panel" aria-labelledby="ingredients-heading">
+        <div class="recipe-panel-heading">
+          <div>
+            <h2 id="ingredients-heading">Use these first</h2>
+            <p id="ingredient-summary">Your soonest-expiring ingredients will guide the search.</p>
+          </div>
+          <span class="item-count" id="ingredient-count" aria-label="0 ingredients">0</span>
+        </div>
+        <div id="ingredient-list" class="ingredient-list" aria-label="Ingredients prioritized by expiration"></div>
+        <p id="ingredient-note" class="ingredient-note"></p>
+        <button id="search-button" class="submit-button" type="button" disabled>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="10.8" cy="10.8" r="6.3" stroke="currentColor" stroke-width="1.8"/>
+            <path d="m15.5 15.5 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span id="search-button-label">Find recipes</span>
+        </button>
+        <div id="recipe-message" class="recipe-message" role="status" aria-live="polite" hidden></div>
+      </section>
+
+      <section class="recipe-section" aria-labelledby="results-heading">
+        <div class="results-heading">
+          <div>
+            <h2 id="results-heading">Recipe ideas</h2>
+            <p>Ranked by how many of your expiring ingredients they use.</p>
+          </div>
+          <span id="results-count" class="results-count"></span>
+        </div>
+        <div id="recipe-results" class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4" aria-live="polite"></div>
+        <div id="recipe-empty" class="recipe-empty">
+          <strong>No recipes yet</strong>
+          <p id="recipe-empty-text">Add food to your fridge, then search for ideas to use it up.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous" defer></script>
+    <script src="recipes.js" defer></script>
+  </body>
+</html>

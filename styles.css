@@ -72,6 +72,11 @@ input {
 .top-note {
   color: var(--muted);
   font-size: 13px;
+  text-decoration: none;
+}
+
+.top-note:hover {
+  color: var(--green);
 }
 
 .intro {
