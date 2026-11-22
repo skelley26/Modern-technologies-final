@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f4ed">
+    <title>Fridgekeeper — Know what’s fresh</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Fridgekeeper home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M7 3.75h10a1.75 1.75 0 0 1 1.75 1.75v13A1.75 1.75 0 0 1 17 20.25H7a1.75 1.75 0 0 1-1.75-1.75v-13A1.75 1.75 0 0 1 7 3.75Z" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M5.5 11.5h13M9 7.25v1.5m0 5.75V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          fridgekeeper
+        </a>
+        <span class="top-note">Waste less food, waste less money.</span>
+      </header>
+
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Here's your kitchen at a glance!</p>
+        <h1>Know what’s fresh.</h1>
+        <p class="subtitle">Keep track of what’s in your fridge and use it while it’s at its best.</p>
+      </section>
+
+      <div class="columns">
+        <section class="panel list-panel" aria-labelledby="fridge-heading">
+          <div class="panel-heading">
+            <div>
+              <h2 id="fridge-heading">In your fridge</h2>
+              <p>Sorted by what expires first</p>
+            </div>
+            <span class="item-count" id="item-count" aria-label="0 items">0</span>
+          </div>
+          <div class="legend" aria-label="Expiration color guide">
+            <span class="legend-item"><span class="dot red" aria-hidden="true"></span>3 days or less</span>
+            <span class="legend-item"><span class="dot yellow" aria-hidden="true"></span>4–7 days</span>
+            <span class="legend-item"><span class="dot" aria-hidden="true"></span>More than a week</span>
+          </div>
+          <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+          <ul id="food-list" class="food-list" aria-live="polite"></ul>
+          <div id="empty-state" class="empty-state">
+            <span class="empty-icon" aria-hidden="true">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none">
+                <path d="M12 5v14m-7-7h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <strong>Your fridge list is empty</strong>
+            Add your first item to start keeping track.
+          </div>
+        </section>
+
+        <section class="panel form-panel" aria-labelledby="add-heading">
+          <div class="panel-heading">
+            <div>
+              <h2 id="add-heading">Add an item</h2>
+              <p>What did you bring home?</p>
+            </div>
+          </div>
+          <form id="add-form" class="form-body">
+            <div class="field">
+              <label for="food-name">Food name</label>
+              <input id="food-name" name="name" type="text" maxlength="80" placeholder="e.g. Greek yogurt" autocomplete="off" required>
+            </div>
+            <div class="field">
+              <label for="expiry-date">Expiration date</label>
+              <input id="expiry-date" name="expiry" type="date" required>
+            </div>
+            <p class="helper">Check the package for its best-before or use-by date.</p>
+            <button class="submit-button" type="submit">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 5v14m-7-7h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              Add to fridge
+            </button>
+          </form>
+          <div class="form-note">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3.75a8.25 8.25 0 1 0 0 16.5 8.25 8.25 0 0 0 0-16.5Zm0 4v4.5m0 3h.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            Your list is saved in this browser, so it’ll be here when you come back.
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous" defer></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
