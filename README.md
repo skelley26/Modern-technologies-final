@@ -12,22 +12,25 @@ With this program, you can add an inventory of all the items in your fridge and 
  
 
 ## Technology Choices:
-For the development of the frontend, HTML and CSS will be utilized. For the backend development, Node.js will be used; especially with the functionality of the APIs I plan to use. If I use a database, MongoDB seems to be the most realistic as it works well with JavaScript, otherwise I am familiar with SQL. The project will be deployed with Google Cloud.
+For the development of the frontend, HTML and CSS will be utilized. For the backend development, Dockerfile and Node.js will be used; especially with the functionality of the APIs I plan to use. If I use a database, MongoDB seems to be the most realistic as it works well with JavaScript, otherwise I am familiar with SQL. The project will be deployed with Google Cloud.
 
  
 
  
 
 ## How to install:
-1. Steps on how to install
+1. go to https://fridgekeeper-392875257357.us-central1.run.app 
 
  
 
 ## Usages:
-- Usages
+- On the homepage, add and delete all the ingredients in your fridge.
+- to go to the recipe page, click on the three lines in the top right corner of the page and click Recipe Finder
 
  
 
 ## AI usages:
 - Boilerplate
-- List of other functionalities AI helped with.
+- setting up color icons for items
+- API functionality
+- cloud implementation with Dockerfile, .yaml, and nginx
